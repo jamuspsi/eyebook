@@ -81,6 +81,9 @@ EyebookApp = Ice.$extend('EyebookApp', {
 	}),
 	remove_page: function(page) {
 		var self = this;
+		if(self.pages().length === 1) {
+			return;  //Don't delete the last page.
+		}
 		self.pages.remove(page);
 	},
 	insert_page: function(pos) {
