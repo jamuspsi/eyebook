@@ -18,6 +18,7 @@ EyebookPage = Ice.$extend('EyebookPage', {
 		self.lines = ko.observableArray([]);
 
 		self.lines.push(new EyebookLine('LordHamster', 'Sup d00ds.'));
+		self.lines.push(new EyebookLine('CharlsNChrg', "Don't d00d me."));
 	}
 });
 
