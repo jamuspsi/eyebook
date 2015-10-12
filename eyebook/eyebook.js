@@ -137,6 +137,8 @@ $(function() {
 	il("LordHamster", "And I'm thinking no, too.  Just because this is something you want.");
 	il("CharlsNChrg", "*sigh*");
 	il("CharlsNChrg", "Parson...I want her for reasons that don't have anything to do with you.");
+	eyebook_app.insert_page(1);
+
 	il("CharlsNChrg", "If that offer doesn't interest you, then name something that does.");
 	il("LordHamster", "How bout you give up the calculations I owe you?  All of them.");
 	il("CharlsNChrg", "Done.");
@@ -144,10 +146,9 @@ $(function() {
 	il("CharlsNChrg", "I already have.  It sends you home.");
 	il("LordHamster", "No, I want a full technical explanation.");
 	il("LordHamster", "Who created it, why, and what are its specifications?  Its \"underpinnings.\".");
-	eyebook_app.pages.push(new EyebookPage());
-
 	il("CharlsNChrg", "Dione.  What else?");
 	il("LordHamster", "Get us our Archon prisoner back from Jetstone.");
+	eyebook_app.insert_page(2);
 	il("CharlsNChrg", "I said I can't make deals for other sides.  Jetstone won't even talk to me.  Name something else.");
 	il("LordHamster", "Tell me why you want the Queen so bad.");
 	il("LordHamster", "I mean, you're not even saying \"take her prisoner and hand her over,\" you still want her to be running her side.  Why?");
