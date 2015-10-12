@@ -12,20 +12,40 @@
 			<script src="eyebook/knockout-3.3.0.js" type="text/javascript"></script>
 			<script src="eyebook/classy/classy.js" type="text/javascript"></script>
 			<script src="eyebook/icejs/ice.js" type="text/javascript"></script>
+			<script src="eyebook/html2canvas.js" type="text/javascript"></script>
 			<script src="eyebook/eyebook.js" type="text/javascript"></script>
 			<div class="eyebook_app">
-				<!-- ko foreach: { data: app.scenes, as: 'scene' } -->
+				<p>
+					<strong>Mode</strong>
+					<label>
+						<input type="radio" name="mode" value="edit" data-bind="checked: app.mode" />
+						Edit
+					</label>
+					<label>
+						<input type="radio" name="mode" value="preview" data-bind="checked: app.mode" />
+						Preview
+					</label>
+					<label>
+						<input type="radio" name="mode" value="images" data-bind="checked: app.mode" />
+						Make Savable Images
+					<label>
+				</p>
+				<!-- ko foreach: { data: app.scenes(), as: 'scene' } -->
 					<div class="eyebook_scene">
-						<div class="eyebook_render">
+						<div class="eyebook_image" data-bind="visible: eyebook_app.mode() === 'images'"></div>
+						<div class="eyebook_render" data-bind="visible: eyebook_app.mode() !== 'images'">
 							<img class="eyebook_bg" src="eyebook/Eyebook_open.png" />
-							<!-- ko foreach: { data: [scene.left_page, scene.right_page], as: 'page' } -->
+							<!-- ko foreach: { data: _.filter([scene.left_page(), scene.right_page()]), as: 'page' } -->
 								<div class="eyebook_page" data-bind="css: page.side()">
 									<!-- ko foreach: { data: page.lines(), as: 'line' } -->
 										<p class="eyebook_line">
 											<span class="eyebook_name" data-bind="
-												text: line.name() + ':',
-												style: { color: eyebook_app.names[line.name()], fontWeight: 'bold' }
-											"></span>
+												text: line.name(),
+												style: {
+													color: eyebook_app.names[line.name()],
+													textShadow: '1px 0px ' + eyebook_app.names[line.name()]
+												}
+											"></span><strong>:</strong>
 											<span class="eyebook_text" data-bind="
 												text: line.text()
 											"></span>
@@ -34,8 +54,85 @@
 								</div>
 							<!-- /ko -->
 						</div>
+						<div class="eyebook_editor" data-bind="visible: eyebook_app.mode() === 'edit'">
+							<h6>
+								<a href="#" data-bind="
+									click: function() {
+										var pos = eyebook_app.pages().indexOf(scene.left_page());
+										eyebook_app.insert_page(pos);
+									}
+								">Insert page</a>
+							</h6>
+							<!-- ko foreach: { data: _.filter([scene.left_page(), scene.right_page()]), as: 'page' } -->
+								<h3>
+									Edit Page
+									<span data-bind="text: eyebook_app.pages().indexOf(page) + 1"></span>
+									(<span data-bind="text: page.side()"></span>)
+									<a href="#" style="cursor: pointer" data-bind="
+										click: function() {
+											eyebook_app.remove_page(page);
+										}
+									">Remove</a>
+								</h3>
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<a href="#" class="insert_line" data-bind="
+													click: function() {
+														page.insert_line(0);
+													}
+												">Insert Line</a>
+											</td>
+										</tr>
+										<!-- ko foreach: {data: page.lines(), as: 'line' } -->
+											<tr>
+												<td>
+													<a href="#" class="remove_line" data-bind="
+														click: function() {
+															page.remove_line(line);
+														}
+													">Remove</a>
+												</td>
+												<td>
+													<select class="edit_name" data-bind="
+														options: _.keys(eyebook_app.names),
+														value: line.name
+													"></select>
+												</td>
+												<td>
+													<input class="edit_text" data-bind="
+														value: line.text
+													" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a href="#" class="insert_line" data-bind="
+														click: function() {
+															var pos = page.lines().indexOf(line);
+															page.insert_line(pos + 1);
+														}
+													">Insert Line</a>
+												</td>
+											</tr>
+										<!-- /ko -->
+									</tbody>
+								</table>
+								<h6>
+									<a href="#" data-bind="
+										click: function() {
+											var pos = eyebook_app.pages().indexOf(page) + 1;
+											eyebook_app.insert_page(pos);
+										}
+									">Insert page</a>
+								</h6>
+
+								<!-- /ko -->
+							</div>
 					</div>
 				<!-- /ko -->
+				
 			</div>
 		</div>
 	</body>
