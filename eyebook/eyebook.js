@@ -52,7 +52,7 @@ EyebookApp = Ice.$extend('EyebookApp', {
 		self.mode = ko.observable('edit');
 		self.mode.subscribe(_.bind(self.on_mode_change, self));
 
-		for(var x = 0;x<2;x++) {
+		for(var x = 0;x<1;x++) {
 			var page = new EyebookPage();
 			self.pages.push(page);
 		}
@@ -146,7 +146,7 @@ $(function() {
 	il("CharlsNChrg", "I already have.  It sends you home.");
 	il("LordHamster", "No, I want a full technical explanation.");
 	il("LordHamster", "Who created it, why, and what are its specifications?  Its \"underpinnings.\".");
-	il("CharlsNChrg", "Dione.  What else?");
+	il("CharlsNChrg", "Done.  What else?");
 	il("LordHamster", "Get us our Archon prisoner back from Jetstone.");
 	eyebook_app.insert_page(2);
 	il("CharlsNChrg", "I said I can't make deals for other sides.  Jetstone won't even talk to me.  Name something else.");
