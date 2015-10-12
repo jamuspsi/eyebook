@@ -1,0 +1,42 @@
+<!doctype html5>
+<html>
+	<body>
+		<script src="eyebook/jquery-1.11.3.min.js" type="text/javascript"></script>
+
+		
+		<div class="elgg-left">
+			<link rel="stylesheet/less" type="text/css" href="eyebook/eyebook.less">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js" type="text/javascript"></script>
+			
+			<script src="eyebook/underscore-min.js" type="text/javascript"></script>
+			<script src="eyebook/knockout-3.3.0.js" type="text/javascript"></script>
+			<script src="eyebook/classy/classy.js" type="text/javascript"></script>
+			<script src="eyebook/icejs/ice.js" type="text/javascript"></script>
+			<script src="eyebook/eyebook.js" type="text/javascript"></script>
+			<div class="eyebook_app">
+				<!-- ko foreach: { data: app.scenes, as: 'scene' } -->
+					<div class="eyebook_scene">
+						<div class="eyebook_render">
+							<img class="eyebook_bg" src="eyebook/Eyebook_open.png" />
+							<!-- ko foreach: { data: [scene.left_page, scene.right_page], as: 'page' } -->
+								<div class="eyebook_page" data-bind="css: page.side()">
+									<!-- ko foreach: { data: page.lines(), as: 'line' } -->
+										<p class="eyebook_line">
+											<span class="eyebook_name" data-bind="
+												text: line.name() + ':',
+												style: { color: eyebook_app.names[line.name()], fontWeight: 'bold' }
+											"></span>
+											<span class="eyebook_text" data-bind="
+												text: line.text()
+											"></span>
+										</p>
+									<!-- /ko -->
+								</div>
+							<!-- /ko -->
+						</div>
+					</div>
+				<!-- /ko -->
+			</div>
+		</div>
+	</body>
+</html>

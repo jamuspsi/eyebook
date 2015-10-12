@@ -1,0 +1,41 @@
+body {
+	background-color: darkGray;
+}
+
+.elgg-left {
+	width: 900px;
+	background-color: white;
+	margin-left: 100px;
+	margin-right: 200px;
+	min-height: 800px;
+}
+
+.eyebook_app {
+	font-family: "arial narrow";
+	.eyebook_scene {
+		position: relative;
+
+		.eyebook_bg {
+			width: 100%;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+		.eyebook_page {
+			position: absolute;
+			top: 20px;
+			width: 350px;
+			min-height: 455px;
+			background-color: rgba(150, 150, 150, 0.5);
+
+			&.left {
+				left: 67px;
+
+			}
+			&.right {
+				left: 475px;
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,6 @@
+[submodule "eyebook/icejs"]
+	path = eyebook/icejs
+	url = https://github.com/jamuspsi/icejs.git
+[submodule "eyebook/classy"]
+	path = eyebook/classy
+	url = https://github.com/jamuspsi/classy.git
