@@ -33,7 +33,7 @@ var elgg = {"config":{"lastcache":1444018872,"viewtype":"default","simplecache_e
 
 				<link rel="stylesheet/less" type="text/css" href="eyebook/eyebook.less">
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js" type="text/javascript"></script>
-			
+
 			<script src="eyebook/underscore-min.js" type="text/javascript"></script>
 			<script src="eyebook/knockout-3.3.0.js" type="text/javascript"></script>
 			<script src="eyebook/classy/classy.js" type="text/javascript"></script>
@@ -41,7 +41,7 @@ var elgg = {"config":{"lastcache":1444018872,"viewtype":"default","simplecache_e
 			<script src="eyebook/icejs/ice.js" type="text/javascript"></script>
 			<script src="eyebook/html2canvas.js" type="text/javascript"></script>
 			<script src="eyebook/eyebook.js" type="text/javascript"></script>
-			
+
 
 	<script src="http://www.erfworld.com/vendors/requirejs/require-2.1.4.min.js"></script>
 	<script src="http://www.erfworld.com/cache/1444018872/default/js/elgg"></script>
@@ -59,7 +59,7 @@ var elgg = {"config":{"lastcache":1444018872,"viewtype":"default","simplecache_e
 	<body>
 		<script src="eyebook/jquery-1.11.3.min.js" type="text/javascript"></script>
 
-		
+
 
 
 
@@ -70,12 +70,12 @@ var elgg = {"config":{"lastcache":1444018872,"viewtype":"default","simplecache_e
     var _qevents = _qevents || [];
     (function() {
         var elem = document.createElement('script');
-        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + 
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") +
                     ".quantserve.com/quant.js";
         elem.async = true;
         elem.type = "text/javascript";
         var scpt = document.getElementsByTagName('script')[0];
-        scpt.parentNode.insertBefore(elem, scpt);  
+        scpt.parentNode.insertBefore(elem, scpt);
     })();
 </script>
 <script type="text/javascript">
@@ -83,13 +83,13 @@ var elgg = {"config":{"lastcache":1444018872,"viewtype":"default","simplecache_e
         qacct:"p-c54G_RnM5lvok", // Riot Ads
         labels: "comics"
     },
-    { 
-        qacct:"p-f7zSVpTc2SqAM", // Erfworld 
+    {
+        qacct:"p-f7zSVpTc2SqAM", // Erfworld
     }]);
 </script>
 <noscript>
 <div style="display:none">
-<img src="//pixel.quantserve.com/pixel?a.1=p-c54G_RnM5lvok&a.2=p-f7zSVpTc2SqAM&labels=comics" 
+<img src="//pixel.quantserve.com/pixel?a.1=p-c54G_RnM5lvok&a.2=p-f7zSVpTc2SqAM&labels=comics"
         border="0" height="1" width="1" alt="Quantcast"/>
 </div>
 </noscript>
@@ -109,7 +109,7 @@ var elgg = {"config":{"lastcache":1444018872,"viewtype":"default","simplecache_e
 
 	<div class="elgg-page-messages">
 		<ul class="elgg-system-messages"><li class="hidden"></li></ul>	</div>
-	
+
 		<div class="elgg-page-topbar">
 		<div class="elgg-inner">
 			<ul class="elgg-menu elgg-menu-topbar elgg-menu-topbar-alt"><li class="elgg-menu-item-usersettings"><a href="http://www.erfworld.com/settings/user/Jamus"><span class="elgg-icon elgg-icon-settings "></span>Settings</a></li></ul><ul class="elgg-menu elgg-menu-topbar elgg-menu-topbar-default"><li class="elgg-menu-item-profile"><a href="http://www.erfworld.com/profile/Jamus" class="elgg-topbar-avatar"><img src="http://www.erfworld.com/_graphics/icons/user/defaulttopbar.gif" alt="Jamus" title="Profile" class="elgg-border-plain elgg-transition"/></a></li><li class="elgg-menu-item-friends"><a href="http://www.erfworld.com/friends/Jamus" title="Friends"><span class="elgg-icon elgg-icon-users "></span></a></li></ul>		</div>
@@ -118,7 +118,7 @@ var elgg = {"config":{"lastcache":1444018872,"viewtype":"default","simplecache_e
 			<hgroup id="title-header">
 <h1><a href="http://www.erfworld.com/"><img src="http://www.erfworld.com/_graphics/logo.png" /></a></h1>
 
-	
+
 	<span id='topbar-target' style='display:none;'>
 		<span id='topbar-load'>
 			<script type='text/javascript'>
@@ -262,7 +262,7 @@ var elgg = {"config":{"lastcache":1444018872,"viewtype":"default","simplecache_e
 </script>
 	</header>
     <div id="page">
-			
+
 <ul id="upperSub">
     <li><a href="/erf_stream/about_view">About</a></li>
 <li><a href="/erf_stream/books">Comic</a></li>
@@ -278,8 +278,8 @@ var elgg = {"config":{"lastcache":1444018872,"viewtype":"default","simplecache_e
 <div id="left" role="main">
     <div class="elgg-left">
     <div class="eyebook_app" data-bind="template: {name: 'eyebook_app', data: app, as: 'app'}"></div>
-			
-			
+
+
 
     </div>
 </div>
@@ -334,8 +334,8 @@ So if you're looking to print a book, especially if it's full color, then I'd st
                             shuffleArray(sidebarRemainingAdverts);
 							var appendComment = document.createComment('Sidebar Ads Shuffled');
 							document.getElementById('right').appendChild(appendComment);
-							
-                        } 
+
+                        }
                         var counter = 'A_' + sidebarRemainingAdverts.length;
 						item = sidebarRemainingAdverts.pop();
                     } else {
@@ -344,7 +344,7 @@ So if you're looking to print a book, especially if it's full color, then I'd st
                             shuffleArray(sidebarRemainingPosts);
 							var appendComment = document.createComment('Sidebar Posts Shuffled');
 							document.getElementById('right').appendChild(appendComment);
-                        } 
+                        }
                         var counter = 'P_' + sidebarRemainingPosts.length;
 						item = sidebarRemainingPosts.pop();
                     }
@@ -483,8 +483,8 @@ require([]);
 											<span class="eyebook_name" data-bind="
 												text: line.name(),
 												style: {
-													color: eyebook_app.names[line.name()],
-													textShadow: '1px 0px ' + eyebook_app.names[line.name()]
+													color: eyebook_app.names[line.name()]
+													/* textShadow: '1px 0px ' + eyebook_app.names[line.name()] */
 												}
 											"></span><strong>:</strong>
 											<span class="eyebook_text" data-bind="
@@ -573,7 +573,7 @@ require([]);
 							</div>
 					</div>
 				<!-- /ko -->
-				
+
 			</script>
 			</div> <!-- templates -->
 	</body>

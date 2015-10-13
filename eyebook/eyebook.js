@@ -136,9 +136,8 @@ $(function() {
 	il("LordHamster", "Okay, \"my people\" are saying nfw.");
 	il("LordHamster", "And I'm thinking no, too.  Just because this is something you want.");
 	il("CharlsNChrg", "*sigh*");
-	il("CharlsNChrg", "Parson...I want her for reasons that don't have anything to do with you.");
 	eyebook_app.insert_page(1);
-
+	il("CharlsNChrg", "Parson...I want her for reasons that don't have anything to do with you.");
 	il("CharlsNChrg", "If that offer doesn't interest you, then name something that does.");
 	il("LordHamster", "How bout you give up the calculations I owe you?  All of them.");
 	il("CharlsNChrg", "Done.");
