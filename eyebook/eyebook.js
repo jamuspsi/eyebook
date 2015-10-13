@@ -146,8 +146,8 @@ $(function() {
 	il("LordHamster", "No, I want a full technical explanation.");
 	il("LordHamster", "Who created it, why, and what are its specifications?  Its \"underpinnings.\".");
 	il("CharlsNChrg", "Done.  What else?");
-	il("LordHamster", "Get us our Archon prisoner back from Jetstone.");
 	eyebook_app.insert_page(2);
+	il("LordHamster", "Get us our Archon prisoner back from Jetstone.");
 	il("CharlsNChrg", "I said I can't make deals for other sides.  Jetstone won't even talk to me.  Name something else.");
 	il("LordHamster", "Tell me why you want the Queen so bad.");
 	il("LordHamster", "I mean, you're not even saying \"take her prisoner and hand her over,\" you still want her to be running her side.  Why?");
