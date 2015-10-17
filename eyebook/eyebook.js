@@ -59,7 +59,11 @@ EyebookApp = Ice.$extend('EyebookApp', {
 
 		self.names = {
 			'LordHamster': 'rgba(201, 128, 77, 1)',
-			'CharlsNChrg': 'rgba(64, 134, 196, 1)'
+			'CharlsNChrg': 'rgba(64, 134, 196, 1)',
+			'Overlord1': '#1C09BE',
+			'Wanda': '#C51507',
+			'ImInUrDirtz': '6C594B',
+
 		};
 	},
 	scenes: Ice.kocomputed(function() {
